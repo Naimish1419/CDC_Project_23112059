@@ -162,10 +162,10 @@ bash
 ### 5. Download Satellite Images & Generate CNN Embeddings
 - python data_fetcher.py
 
-This trains:
-- Tabular models (Linear Regression, Neural Network, XGBoost)
-- Multimodal residual model using image embeddings
-- Evaluates performance using R² and RMSE
+This step:
+- Downloads satellite images using ESRI World Imagery
+- Extracts image embeddings using ResNet50
+- ⚠️ This step may take time depending on network speed.
 
 ### 7. Apply Pipeline to Test Data
   
@@ -179,13 +179,13 @@ This trains:
 - CNN weights are frozen (no fine-tuning)
 - Large generated files (satellite images and embeddings) are excluded and can be regenerated
 
-This step:
-- Downloads satellite images using ESRI World Imagery
-- Extracts image embeddings using ResNet50
-- ⚠️ This step may take time depending on network speed.
-
 ### 6. Train Models & Evaluate Performance
 - jupyter notebook Model_Training.ipynb
+
+This trains:
+- Tabular models (Linear Regression, Neural Network, XGBoost)
+- Multimodal residual model using image embeddings
+- Evaluates performance using R² and RMSE
 
 ---
 
