@@ -118,9 +118,9 @@ This allows images to model **neighborhood-level price corrections**.
 | Model | Data Used | R² (Test) | RMSE (Test) |
 |-----|---------|-----------|-------------|
 | Linear Regression | Tabular | 0.7855 | 0.2465 |
-| Neural Network | Tabular | 0.8897 | 0.1767 |
+| Neural Network | Tabular | 0.8867 | 0.1791 |
 | XGBoost | Tabular | 0.9084 | 0.1611 |
-| **XGBoost (Multimodal Residual)** | **Tabular + Images** | **0.9095** | **0.1601** |
+| **XGBoost (Multimodal Residual)** | **Tabular + Images** | **0.9096** | **0.1600** |
 
 ### Key Insight
 Tabular data already explains **~90% of price variance**.  
