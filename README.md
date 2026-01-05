@@ -115,7 +115,7 @@ This allows images to model **neighborhood-level price corrections**.
 
 ## 📈 Results: Tabular vs Multimodal
 
-| Model | Data Used | R² (Test) | RMSE (Test) |
+| Model | Data Used | R² (Test) | RMSE (log_price) (Test) |
 |-----|---------|-----------|-------------|
 | Linear Regression | Tabular | 0.7855 | 0.2465 |
 | Neural Network | Tabular | 0.8798 | 0.1845 |
