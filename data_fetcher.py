@@ -286,3 +286,23 @@ print("✅ Embeddings saved")
 print("File: cnn_embeddings.npy")
 print("File: cnn_embedding_index.csv")
 
+
+# ============================================================
+# NOTE: Applying the Same Pipeline to Test Data
+# ============================================================
+# This entire data fetching and embedding pipeline can be
+# applied to the test dataset by simply:
+#
+# 1. Replacing the input file (e.g., train(1).xlsx → test2.xlsx)
+# 2. Running the same preprocessing and feature engineering
+# 3. Generating satellite images using lat/long coordinates
+# 4. Extracting CNN embeddings with the same frozen ResNet50
+#
+# IMPORTANT:
+# - The same preprocessing logic MUST be used for train and test
+# - The row_id ↔ image mapping must remain consistent
+# - No refitting of PCA or models should be done on test data
+#
+# This ensures fair evaluation and prevents data leakage.
+# ===========================================================
+
