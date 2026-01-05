@@ -145,47 +145,47 @@ Follow the steps below to set up the environment and reproduce the results.
 ### 1. Create a Virtual Environment (Recommended)
 
 bash
-python -m venv venv
-source venv/bin/activate        # macOS / Linux
-venv\Scripts\activate           # Windows
+- python -m venv venv
+- source venv/bin/activate        # macOS / Linux
+- venv\Scripts\activate           # Windows
 
 ### 2. Install Dependencies
-pip install numpy pandas scikit-learn xgboost torch torchvision pillow tqdm requests folium matplotlib seaborn
+- pip install numpy pandas scikit-learn xgboost torch torchvision pillow tqdm requests folium matplotlib seaborn
 
 ### 3. Prepare the Dataset
-. Place train.xlsx in the project root directory
-. Ensure the dataset contains latitude (lat) and longitude (long) columns (required for satellite imagery)
+- Place train.xlsx in the project root directory
+- Ensure the dataset contains latitude (lat) and longitude (long) columns (required for satellite imagery)
 
 ### 4. Run Exploratory Data Analysis (EDA)
-jupyter notebook preprocessing.ipynb
+- jupyter notebook preprocessing.ipynb
 
 ### 5. Download Satellite Images & Generate CNN Embeddings
-python data_fetcher.py
+- python data_fetcher.py
 
-This trains:
-. Tabular models (Linear Regression, Neural Network, XGBoost)
-. Multimodal residual model using image embeddings
-. Evaluates performance using R² and RMSE
+- This trains:
+- Tabular models (Linear Regression, Neural Network, XGBoost)
+- Multimodal residual model using image embeddings
+- Evaluates performance using R² and RMSE
 
 ### 7. Apply Pipeline to Test Data
   
-. Replace the training dataset with the test dataset
-. Run the same preprocessing and embedding pipeline
-. Use trained models for prediction
-. Do NOT refit scalers, PCA, or CNN models to avoid data leakage
+- Replace the training dataset with the test dataset
+- Run the same preprocessing and embedding pipeline
+- Use trained models for prediction
+- Do NOT refit scalers, PCA, or CNN models to avoid data leakage
 
 ### 🔁 Reproducibility Notes
-Fixed random seeds are used
-CNN weights are frozen (no fine-tuning)
-Large generated files (satellite images and embeddings) are excluded and can be regenerated
+- Fixed random seeds are used
+- CNN weights are frozen (no fine-tuning)
+- Large generated files (satellite images and embeddings) are excluded and can be regenerated
 
-This step:
-. Downloads satellite images using ESRI World Imagery
-. Extracts image embeddings using ResNet50
-. ⚠️ This step may take time depending on network speed.
+- This step:
+- Downloads satellite images using ESRI World Imagery
+- Extracts image embeddings using ResNet50
+- ⚠️ This step may take time depending on network speed.
 
 ### 6. Train Models & Evaluate Performance
-jupyter notebook Model_Training.ipynb
+- jupyter notebook Model_Training.ipynb
 
 ---
 
